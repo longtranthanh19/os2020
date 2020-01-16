@@ -1,0 +1,79 @@
+1,echo hello world
+    function : print a text or string, all files/folders, similar to ls command .
+    output: hello world
+
+2, passwd 
+    function : is used to change the user account passwords
+
+3, date
+    function : show date 
+    output : Thu Jan 16 09:53:35 +07 2020
+
+4, hostname
+    function : is used to obtain the DNS(Domain Name System) name and set the system’s hostname or NIS(Network Information System) domain name
+    output : Long-Tran-Mac.local
+5, arch
+    function : is used to print the computer architecture.
+    output : i386
+6, uname -a
+    function : You can get system kernel version and some other system information with the uname command 
+    output : Darwin Long-Tran-Mac.local 16.7.0 Darwin Kernel Version 16.7.0: Thu Jun 15 17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64 x86_64
+7, dmesg 
+    function : is used to examine or control the kernel ring buffer. The default action is to display all messages from the kernel ring buffer.
+    output : SandboxViolation: airportd(59) deny(1) file-read-metadata /Users
+             SandboxViolation: airportd(59) deny(1) file-read-metadata /Users
+             SandboxViolation: airportd(59) deny(1) file-read-metadata /Users
+             SandboxViolation: airportd(59) deny(1) file-read-metadata /Users/apple/Library/Keychains/login.keychain-db
+             SandboxViolation: airportd(59) deny(1) file-read-metadata /Users/apple/Library/Keychains/login.keychain-db
+             SandboxViolation: airportd(59) deny(1) file-read-metadata /Users
+             SandboxViolation: airportd(59) deny(1) file-read-metadata /Users
+             SandboxViolation: airportd(59) deny(1) file-read-metadata /Users
+             SandboxViolation: airportd(59) deny(1) file-read-metadata /Users
+             SandboxViolation: airportd(59) deny(1) file-read-metadata /Users
+8, uptime 
+    function : is used to find out how long the system is active (running)
+    output : 10:04  up 1 day, 10:54, 2 users, load averages: 1.78 1.93 1.90
+9, who am i 
+    function : There is a Linux command who. Who am i is not a valid form of that command, as am i are not valid arguments for who. Consequently, who am i is not a valid command. See man who for more about the who command.
+    output : apple    ttys000  Jan 16 09:07 
+10,whoami
+    function : is displayed the username of the current user when this command is invoked
+    output : apple
+11,who 
+    function: is used to get information about currently logged in user on to system.
+    output: apple    console  Jan 14 23:11 
+            apple    ttys000  Jan 16 09:07 
+12,id 
+    function : id command in Linux is used to find out user and group names and numeric ID’s (UID or group ID) of the current user or any other user in the server. This command is useful to find out the following information as listed below:
+            User name and real user id.
+            Find out the specific Users UID.
+            Show the UID and all groups associated with a user.
+            List out all the groups a user belongs to.
+            Display security context of the current user.
+    output : uid=502(apple) gid=20(staff) groups=20(staff),702(com.apple.sharepoint.group.2),12(everyone),61(localaccounts),79(_appserverusr),80(admin),81(_appserveradm),98(_lpadmin),33(_appstore),100(_lpoperator),204(_developer),395(com.apple.access_ftp),398(com.apple.access_screensharing),399(com.apple.access_ssh)
+13,last 
+    function : is used to display the list of all the users logged in and out since the file /var/log/wtmp was created. One or more usernames can be given as an argument to display their login in (and out) time and their host-name.
+    output :apple     ttys000                   Thu Jan 16 09:07   still logged in
+            apple     ttys000                   Thu Jan 16 09:01 - 09:01  (00:00)
+            apple     ttys000                   Wed Jan 15 21:19 - 21:19  (00:00)
+            apple     console                   Tue Jan 14 23:11   still logged in
+            reboot    ~                         Tue Jan 14 23:10 
+            shutdown  ~                         Tue Jan 14 23:10 
+            apple     console                   Tue Jan  7 22:00 - 23:10 (7+01:09)
+            reboot    ~                         Tue Jan  7 22:00 
+            shutdown  ~                         Tue Jan  7 22:00 
+            apple     console                   Mon Jan  6 21:52 - 22:00 (1+00:07)
+            reboot    ~                         Mon Jan  6 21:52 
+            shutdown  ~                         Mon Jan  6 21:52 
+
+            wtmp begins Mon Jan  6 21:52 
+14,finger 
+    function : displays a M- before each converted character
+    output :Login    Name                 TTY  Idle  Login  Time   Office  Phone
+            apple    Long Tran           *con    1d  Tue    23:11
+            apple    Long Tran            s00        Thu    09:07
+15,w 
+    function : is used to show who is logged on and what they are doing. This command shows the information about the users currently on the machine and their processes.
+    output :USER     TTY      FROM              LOGIN@  IDLE WHAT
+            apple    console  -                Tue23   35:04 -
+            apple    s000     -                 9:07       - w
