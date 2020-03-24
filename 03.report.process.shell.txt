@@ -1,0 +1,56 @@
+1, List all my running processes
+ps -U root -u root u
+output : 
+root       727  0.0  0.1 309728  8164 ?        Ssl  14:00   0:00 /usr/sbin/gdm3
+root       823  0.0  0.1 263100  8632 ?        Sl   14:00   0:00 gdm-session-wor
+root       839  0.0  0.0  25988  6284 ?        S    14:00   0:00 /sbin/dhclient 
+root       978  0.0  0.1 323972  8904 ?        Ssl  14:00   0:00 /usr/lib/upower
+root      1050  0.0  0.1 316788  9440 ?        Ssl  14:00   0:00 /usr/lib/x86_64
+root      1051  0.5  0.4 532800 38600 ?        Ssl  14:00   0:05 /usr/lib/packag
+root      1169  0.0  0.1 269288  8736 ?        Sl   14:00   0:00 gdm-session-wor
+root      1959  0.0  0.3 568340 26688 ?        Ssl  14:01   0:00 /usr/lib/fwupd/
+root      2452  0.0  0.0      0     0 ?        I    14:06   0:00 [kworker/u4:0-i
+root      2693  0.0  0.0      0     0 ?        I    14:15   0:00 [kworker/1:0-cg
+
+2, Start a new process
+gnome-calculator 
+output : A calculator
+
+3, Find process id of your newly-created process (ps with grep)
+ps -e |grep gnome
+output :  
+ 965 tty1     00:00:00 gnome-session-b
+ 971 tty1     00:00:02 gnome-shell
+ 1187 ?        00:00:00 gnome-keyring-d
+ 1202 tty2     00:00:00 gnome-session-b
+ 1338 tty2     00:01:02 gnome-shell
+ 1381 ?        00:00:00 gnome-shell-cal
+ 1853 ?        00:00:03 gnome-software
+ 1856 ?        00:00:06 gnome-terminal-
+
+4, Show its process status 
+cat /proc/965/status | head -10
+Name:	gnome-session-b
+Umask:	0002
+State:	S (sleeping)
+Tgid:	965
+Ngid:	0
+Pid:	965
+PPid:	960
+TracerPid:	0
+Uid:	121	121	121	121
+Gid:	125	125	125	125
+
+5, Pause it 
+kill -s STOP 1856
+output : my terminal have been stopped
+
+6, Resume it 
+kill -s CONT 1856
+
+7, Terminate it 
+kill -s KILL 1856
+
+
+
+

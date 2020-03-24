@@ -1,0 +1,16 @@
+Show number of threads for process firefox ]
+
+Command to find process ID of firefox 
+
+pidof firefox
+ps aux | grep -i firefox
+pgrep firefox 
+
+output: 2252
+
+ps -o nlwp 2252 
+
+output: 
+NLWP
+  55
+

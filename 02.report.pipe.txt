@@ -1,0 +1,25 @@
+1, List all files in current directory containing <list> in their names 
+ls | grep list
+output : filelist 
+
+2, Count how many lines that /etc/passwd has 
+wc -l /etc/passwd
+output: 41 /etc/passwd
+
+3, Check how much memory that your machine has, not free memory
+free -h | head -2
+output :
+total        used        free      shared  buff/cache   available
+Mem:           7,7G        1,2G        5,3G        215M        1,1G        6,0G
+
+4, Find how many logical core that your CPU has ( see /proc/cpuinfo )
+cat /proc/cpuinfo | grep 'cpu cores' | head -1
+output :
+cpu cores	: 2
+
+5,Count how many .jpg files that you have in your photo directory 
+find *.jpg | wc -l
+output : find: ‘*.jpg’: No such file or directory
+0
+(because i dont have any .jpg files)
+
